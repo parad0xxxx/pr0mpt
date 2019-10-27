@@ -6,19 +6,24 @@ import socket
 import webbrowser
 from datetime import date
 import platform
+import requests
 
-# variables
 today = date.today()
 username = getpass.getuser()
 host = socket.gethostname()
-start_msg = 'Pr0mpt [Version 1.0.0]\n(c) 2019 parad0x & michael\n'
+pcIP = requests.get('https://api.ipify.org/').text
+pvIP = socket.gethostbyname(socket.gethostname())
+version = ' [Version 1.0.0]'
+program_name = 'Pr0mpt'
+c_license = '(c) 2019'
+creators = ' parad0x & michael'
+start_msg = program_name + version + '\n' + c_license + creators + '\n'
 OS = platform.system()
 architecture = platform.architecture()
-# welcome screen
+
 print(start_msg)
 time.sleep(0.1)
-
-# cmd list
+# commands1
 while True:
     command = str(input("$ " + username + " >> "))
     if command == "gethost":
@@ -44,6 +49,8 @@ while True:
     	print('OS platform: ' + OS)
     elif command == "arch":
     	print(architecture)
+    elif command == "ip":
+    	print("Public IP: " + pcIP + '\nPrivate IP: ' + pvIP)
     else:
     	print('')
     	print('Given command invalid\n')

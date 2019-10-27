@@ -8,11 +8,9 @@ from datetime import date
 today = date.today()
 username = getpass.getuser()
 host = socket.gethostname()
-print(60 * "#")
-print("#                                                          #")
-print("#     Programmed by: Michael and Parad0x                   #")
-print("#                                                          #")
-print(60 * "#")
+start_msg = 'Pr0mpt [Version 1.0.0]\n(c) 2019 parad0x & michael\n'
+
+print(start_msg)
 time.sleep(0.1)
 # commands1
 while True:
@@ -20,17 +18,22 @@ while True:
     if command == "gethost":
         print(host)
     elif command == "youtube":
-        webbrowser.open("www.youtube.com")
+        webbrowser.open('www.youtube.com')
     elif command == "date":
         d4 = today.strftime("%b-%d-%Y")
         print("d4 =", d4)
     elif command == "nstat":
-        os.system("netstat")
+        os.system('netstat')
     elif command == "ipconfig":
-        os.system("ipconfig")
+        os.system('ipconfig')
     elif command == "tree":
-        os.system("tree")
+        os.system('tree')
     elif command == "clr":
-        os.system("cls")
+        os.system('cls')
     elif command == "ext":
-        quit()
+    	quit()
+    elif command == "dir":
+    	os.system('dir')
+    else:
+    	print('')
+    	print('Given command invalid\n')

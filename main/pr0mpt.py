@@ -26,7 +26,9 @@ while True:
         print("d4 =", d4)
     elif command == "nstat":
         os.system("netstat")
-    elif command == "tr33":
+    elif command == "ipconfig":
+        os.system("ipconfig")
+    elif command == "tree":
         os.system("tree")
     elif command == "clr":
         os.system("cls")

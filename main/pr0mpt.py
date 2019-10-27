@@ -30,6 +30,6 @@ while True:
     elif command == "tr33":
         os.system("tree")
     elif command == "clr":
-        os.system == "cls"
+        os.system("cls")
     elif command == "ext":
         quit()

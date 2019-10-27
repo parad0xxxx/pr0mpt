@@ -21,7 +21,7 @@ while True:
         webbrowser.open('www.youtube.com')
     elif command == "date":
         d4 = today.strftime("%b-%d-%Y")
-        print("d4 =", d4)
+        print("Date:", d4)
     elif command == "nstat":
         os.system('netstat')
     elif command == "ipconfig":

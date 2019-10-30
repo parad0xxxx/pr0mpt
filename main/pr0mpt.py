@@ -8,7 +8,8 @@ import webbrowser
 from datetime import date
 import platform
 import requests
-import geoip2.database
+import geoip2.database # for ip tracking, coming soon.
+import pyautogui
 # variables and strings.
 today = date.today()
 username = getpass.getuser()
@@ -84,6 +85,14 @@ while True:
     elif command == "show net key=clr":
         keyclr = input("network > ")
         os.system("netsh wlan show profiles %s key=clear" % keyclr)
+    elif command == "run":
+        pyautogui.hotkey('win', 'r')
+    elif command == "npad":
+        files = input("> ")
+        os.system("notepad %s" % files)
+    elif command == "ping":
+        ping = input("> ")
+        os.system("ping %s" % ping)
     else:
     	print('')
     	print('[!] Given command invalid\n')

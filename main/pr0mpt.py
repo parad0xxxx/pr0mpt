@@ -1,3 +1,4 @@
+# Imports #/***THIS IS STILL UNDER DEVELOPMENT 
 import time
 import os
 import sys
@@ -7,7 +8,8 @@ import webbrowser
 from datetime import date
 import platform
 import requests
-
+import geoip2.database
+# variables and strings.
 today = date.today()
 username = getpass.getuser()
 host = socket.gethostname()
@@ -16,7 +18,7 @@ pvIP = socket.gethostbyname(socket.gethostname())
 version = ' [Version 1.0.0]'
 program_name = 'Pr0mpt'
 c_license = '(c) 2019'
-creators = ' parad0x & michael'
+creators = ' Parad0x & Michael'
 start_msg = program_name + version + '\n' + c_license + creators + '\n'
 OS = platform.system()
 architecture = platform.architecture()
@@ -51,6 +53,37 @@ while True:
     	print(architecture)
     elif command == "ip":
     	print("Public IP: " + pcIP + '\nPrivate IP: ' + pvIP)
+    elif command == "echo":
+        echo = input("> ")
+        print(echo)
+    elif command == "colorA1":
+        os.system("color 2")
+    elif command == "colorA2":
+        os.system("color 1")
+    elif command == "colorA3":
+        os.system("color 3")
+    elif command == "colorA4":
+        os.system("color 4")
+    elif command == "colorA5":
+        os.system("color 5")
+    elif command == "colorA6":
+        os.system("color 6")
+    elif command == "colorA7":
+        os.system("color 7")
+    elif command == "dquery":
+        os.system("driverquery")
+    elif command == "shutdown":
+        os.system("shutdown -s")
+    elif command == "restart":
+        os.system("shutdown /r")
+    elif command == "show net profiles":
+        os.system("netsh wlan show profiles")
+    elif command == "py-install":
+        ginstall = input(username +"py-install > ")
+        os.system("pip install %s" % ginstall)
+    elif command == "show net key=clr":
+        keyclr = input("network > ")
+        os.system("netsh wlan show profiles %s key=clear" % keyclr)
     else:
     	print('')
-    	print('Given command invalid\n')
+    	print('[!] Given command invalid\n')

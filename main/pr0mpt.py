@@ -8,7 +8,7 @@ import webbrowser
 from datetime import date
 import platform
 import requests
-import geoip2.database # for ip tracking, coming soon.
+#import geoip2.database # for ip tracking, coming soon.
 import pyautogui
 # variables and strings.
 today = date.today()

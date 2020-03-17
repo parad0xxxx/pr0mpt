@@ -90,6 +90,8 @@ while True:
     elif command == "ping":
         ping = input("> ")
         os.system("ping %s" % ping)
+    elif command == "help":
+        print("npad~~ \n --ping \n --py-install \n --run \n --restart \n --shutdown \n --show net profiles \n --show net key=clear \n --dquery \n --colorA1 -A7 \n --ipconfig \n --echo \n --arch \n --nstat \n --tree \n --nstat \n --ip \n --os \n --gethost \n --dir \n --ext \n --date \n --youtube")
     else:
     	print('')
     	print('[!] Given command invalid\n')
